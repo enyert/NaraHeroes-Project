@@ -23,22 +23,22 @@ if ON_OPENSHIFT:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',  # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-            'NAME': 'ninjas',  # Or path to database file if using sqlite3.
-            'USER': 'admin',                      # Not used with sqlite3.
-            'PASSWORD': 'cnYKgfAfAb9T',                  # Not used with sqlite3.
-            'HOST': '127.7.141.1',                      # Set to empty string for localhost. Not used with sqlite3.
-            'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
+            'NAME': 'OPENSHIFT_DB',  # Or path to database file if using sqlite3.
+            'USER': 'OPENSHIFT_DB_USERNAME',                      # Not used with sqlite3.
+            'PASSWORD': 'OPENSHIFT_DB_PASSWORD',                  # Not used with sqlite3.
+            'HOST': 'OPENSHIFT_DB_HOST',                      # Set to empty string for localhost. Not used with sqlite3.
+            'PORT': 'OPENSHIFT_DB_PORT',                      # Set to empty string for default. Not used with sqlite3.
         }
     }
 else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',  # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-            'NAME': 'ninjas',  # Or path to database file if using sqlite3.
-            'USER': 'admin',                      # Not used with sqlite3.
-            'PASSWORD': 'cnYKgfAfAb9T',                  # Not used with sqlite3.
-            'HOST': '127.7.141.1',                      # Set to empty string for localhost. Not used with sqlite3.
-            'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
+            'NAME': 'OPENSHIFT_DB',  # Or path to database file if using sqlite3.
+            'USER': 'OPENSHIFT_DB_USERNAME',                      # Not used with sqlite3.
+            'PASSWORD': 'OPENSHIFT_DB_PASSWORD',                  # Not used with sqlite3.
+            'HOST': 'OPENSHIFT_DB_HOST',                      # Set to empty string for localhost. Not used with sqlite3.
+            'PORT': 'OPENSHIFT_DB_PORT',                      # Set to empty string for default. Not used with sqlite3.
         }
     }
 
