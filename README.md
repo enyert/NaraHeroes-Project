@@ -1,4 +1,4 @@
-Proyecto Nara Heroes
-====================
+Proyecto NaraHeroes
+===================
 
 Educación para todos
