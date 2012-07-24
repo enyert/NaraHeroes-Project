@@ -1,0 +1,22 @@
+body{
+	background-color: #ffffff;
+	color: green;
+}
+
+#header{
+	/*background-image: url(/static/img/logo3marias.png);*/
+	/*background-position: center top;*/
+	background-repeat : no-repeat;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	position: fixed;
+	left : 0px;
+	top : 0px;
+
+}
+/*#pageContainer{
+
+
+}*/

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Login de usuario{% endblock %}
+{% block content %}
+<form action="/login/" method="post">
+{% csrf_token %}
+{% if form.errors %} <p>Por favor corrige los siguientes campos: </p> {% endif %}
+<div class="login">
+	{% if form.username.errors %} <p class="error">{{ form.username.errors }}</p>{% endif %}
+	<p><label for="username"{% if form.username.errors %} class="error" {% endif %} > Nombre usuario
+	</label>
+	{{ form.username }} </p>
+</div>
+<div class="login">
+	{% if form.password.errors %} <p class="error">{{ form.password.errors }}</p>{% endif %}
+	<p><label for="password"{% if form.password.errors %} class="error" {% endif %} > Contraseña</label>
+	{{ form.password }} </p>
+</div>
+<p><input type="submit" alt="register"></p>
+</form>
+{% endblock %}

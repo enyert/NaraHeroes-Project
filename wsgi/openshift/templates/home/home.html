@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %} Inicio {% endblock %}
+{% block content %}
+  <section id="nav_top_right">
+      {% if user.is_authenticated %} <p><a href="/logout/">logout</a></p>
+      {% else %} <p><a href="/login/">login</a></p>
+      {% endif %}
+      <br>
+  </div>
+  <section id="intro">
+	  <article id="logo"><img src="{{ STATIC_URL }}img/NinjaLogo.png" style="height:260px;"></article>
+	  <article id="video">Video Introductorio</article>
+	  <article id="resumen"><p> Naraheroes esta diseñado para ayudarte a reforzar tus conocimientos de educación básica en matemática, física y química. A través de un sistema de misiones y pruebas podrás ganar conocimientos y habilidad de una forma eficiente y divertida. Aprenderás a la velocidad del rayo!
+	  </p><p> <a href="/register/"> Regístrate! </a></p> </article>
+  </section>
+{% endblock %}

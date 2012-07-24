@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %} Perfil {% endblock %}
+{% block content %} 
+  <section id="nav_top_right">
+      {% if user.is_authenticated %} <p><a href="/logout/">logout</a></p>
+      {% else %} <p><a href="/login/">login</a></p>
+      {% endif %}
+      <br>
+  </section>
+  <h1>Bienvenido usuario: {{ user.username }}</h1>
+{% endblock %}

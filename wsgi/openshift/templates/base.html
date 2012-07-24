@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+  <head>
+	<title>{% block title%}{% endblock %}</title>
+    <meta charset="utf-8" />
+  	<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/bootstrap.css" />
+  	<link rel="icon" type="text/css" href="{{ STATIC_URL }}img/favicon.ico">
+    <script type="text/javascript" src="{{ STATIC_URL }}js/modernizr.js"></script>
+    {% block extraHead %}{% endblock %}
+  </head>
+  <body>
+    <header><h1>Header</h1></header>
+    {% block content %}{% endblock %}
+    <footer>Footer</footer>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    {% block js %}{% endblock %}
+    </body>
+</html>

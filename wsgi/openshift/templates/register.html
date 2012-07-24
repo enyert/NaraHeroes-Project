@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Registro de usuario{% endblock %}
+{% block content %}
+<form id="registerForm" action="/register/" method="post">
+{% csrf_token %}
+{% if form1.errors %} <p>Por favor corrige los siguientes campos: </p> {% endif %}
+<div class="register">
+	{% if form1.username.errors %} <p class="error">{{ form1.username.errors }}</p>{% endif %}
+	<p><label for="username"{% if form1.username.errors %} class="error" {% endif %} > Nombre de usuario
+	</label>
+	{{ form1.username }} </p>
+</div>
+<div class="register">
+	{% if form1.email.errors %} <p class="error">{{ form1.email.errors }}</p>{% endif %}
+	<p><label for="email"{% if form1.email.errors %} class="error" {% endif %} > Email</label>
+	{{ form1.email }} </p>
+</div>	
+<div class="register">
+	{% if form1.password.errors %} <p class="error">{{ form1.password.errors }}</p>{% endif %}
+	<p><label for="password"{% if form1.password.errors %} class="error" {% endif %} > Contraseña</label>
+	{{ form1.password }} </p>
+</div>
+<div class="register">
+	{% if form1.password1.errors %} <p class="error">{{ form1.password1.errors }}</p>{% endif %}
+	<p><label for="password1"{% if form1.password1.errors %} class="error" {% endif %} > Verificar Contraseña</label>
+	{{ form1.password1 }} </p>
+</div>
+<p><input type="submit" alt="register"></p>
+</form>
+{% endblock %}
